@@ -3,9 +3,11 @@
 ## a set of functions to set/get the matrix and set/get the
 ## inverse. The cacheSolve function solves the inverse matrix and
 ## caches the inverse matrix (if it hasn't already been done).
-
+##
 ## author: Marc T. Henry de Frahan
 
+
+##================================================================================
 ## As defined in the assignement:
 ## "This function creates a special "matrix" object that can cache its inverse."
 ##
@@ -42,7 +44,7 @@ makeCacheMatrix <- function(x = matrix()) {
          getinverse = getinverse)
 }
 
-
+##================================================================================
 ## As defined in the assignement:
 ## "This function computes the inverse of the special "matrix"
 ## returned by makeCacheMatrix above. If the inverse has already been
@@ -68,7 +70,7 @@ cacheSolve <- function(x, ...) {
     ## get the matrix
     data <- x$get()
 
-    ## get the matrix inverse
+    ## solve for the matrix inverse
     inv <- solve(data, ...)
 
     ## cache it
